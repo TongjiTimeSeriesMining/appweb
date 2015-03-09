@@ -1,4 +1,4 @@
-package com.CDM2012;
+package featureSelect;
 
 public class ReadIndex {
 	public static int ReadIndex(double[][]cls1,double[][]cls2){

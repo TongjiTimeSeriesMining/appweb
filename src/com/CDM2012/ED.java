@@ -1,4 +1,4 @@
-package com.CDM2012;
+package featureSelect;
 
 public class ED {
 	public double ED(double[] p,double[] q){

@@ -1,4 +1,4 @@
-package com.CDM2012;
+package featureSelect;
 
 public class Mean {
 	public static double Mean(double[][]dis,int[] ind,int p){

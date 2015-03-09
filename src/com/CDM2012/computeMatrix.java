@@ -1,4 +1,4 @@
-package com.CDM2012;
+package featureSelect;
 
 public class computeMatrix {
 	public static double[][] computeMatrix(double[][]ftr,double[][]data2){

@@ -1,4 +1,4 @@
-package com.CDM2012;
+package featureSelect;
 
 public class findNN {
 	public double[] findNN(double[] x,double[] y){
@@ -43,10 +43,10 @@ public class findNN {
 			nx[i] = x[i];
 		}
 		for(int i = 0;i<m;i++){
-			ny[i] = y[i];						//ï¿½ï¿½Õ¹ï¿½ï¿½ï¿½ï¿½query
+			ny[i] = y[i];						//À©Õ¹Á½¸öquery
 		}
 		
-		//ï¿½ï¿½ï¿½ï¿½Ò¶
+		//¸µÀïÒ¶
 		FFT fft = new FFT();
 		Complex[] fx = new Complex[1024];
 		Complex[] fy = new Complex[1024];
@@ -72,7 +72,7 @@ public class findNN {
 		double[] z = new double[n];
 		Complex[] zz = fft.ifft(Z);				
 		for(int i = 0;i<n;i++){
-			z[i] = zz[i].re();			//ï¿½Ã³ï¿½ï¿½ï¿½ï¿½ï¿½Ò¶ï¿½ä»»ï¿½ï¿½Ä½ï¿½ï¿½
+			z[i] = zz[i].re();			//µÃ³ö¸µÀïÒ¶±ä»»ºóµÄ½á¹û
 		}
 		
 		double sumy = 0;

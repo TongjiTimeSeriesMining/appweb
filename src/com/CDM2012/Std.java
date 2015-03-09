@@ -1,4 +1,4 @@
-package com.CDM2012;
+package featureSelect;
 
 public class Std {
 	public static double Std(double[][] dis,int[] ind,int p){

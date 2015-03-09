@@ -1,4 +1,4 @@
-package com.CDM2012;
+package featureSelect;
 
 public class FindL{
 	public static int[] FindL(double[][] dis,double B){

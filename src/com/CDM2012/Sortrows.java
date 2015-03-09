@@ -1,4 +1,4 @@
-package com.CDM2012;
+package featureSelect;
 
 import java.util.Arrays;
 import java.util.Comparator;

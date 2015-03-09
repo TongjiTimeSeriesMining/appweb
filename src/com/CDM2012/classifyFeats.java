@@ -1,4 +1,4 @@
-package com.CDM2012;
+package featureSelect;
 
 public class classifyFeats {
 	public static double classifyFeats(double feats[][],double[]labels){

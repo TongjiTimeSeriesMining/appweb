@@ -1,4 +1,4 @@
-package com.CDM2012;
+package featureSelect;
 
 import java.io.File;
 import java.math.BigDecimal;
@@ -23,7 +23,7 @@ public class openFile {
             e.printStackTrace();
         }
  
-        // list转锟斤拷为锟斤拷锟斤拷
+        // list转化为数组
         String[][] result = data.toArray(new String[][] {});
         int it = 0;
         int it2 = 0;

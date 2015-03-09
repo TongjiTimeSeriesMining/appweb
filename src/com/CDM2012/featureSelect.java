@@ -1,4 +1,4 @@
-package com.CDM2012;
+package featureSelect;
 
 import java.io.BufferedWriter;
 import java.io.FileOutputStream;
@@ -8,11 +8,11 @@ import java.io.OutputStreamWriter;
 public class featureSelect {
 	public static void main(String[] args){
 		openFile file = new openFile();
-		double[][] data = file.openfile();//ï¿½ï¿½ï¿½ï¿½ï¿½Ý¶ï¿½ï¿½ï¿½doubleï¿½ÍµÄ¶ï¿½Î¬ï¿½ï¿½ï¿½ï¿½
+		double[][] data = file.openfile();//°ÑÊý¾Ý¶Á³ÉdoubleÐÍµÄ¶þÎ¬Êý×é
 		
 		double accuracy = 0;
 		
-		double[] cls1 = new double[data.length];//È¡Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		double[] cls1 = new double[data.length];//È¡Ê±¼äÐòÁÐ
 		for (int i = 0; i<data.length;i++){
 			cls1[i] = data[i][0];
 		}
@@ -44,7 +44,7 @@ public class featureSelect {
 						ftr[0][n] = data2[ts-1][i-1+n];
 					}
 					computeMatrix CM = new computeMatrix();
-					double[][] dis = CM.computeMatrix(ftr, data2); //-------------------------------ï¿½ï¿½ï¿½ï¿½ï¿½È·
+					double[][] dis = CM.computeMatrix(ftr, data2); //-------------------------------Êä³öÕýÈ·
 					for(int n = 0;n < dis.length;n++){
 						for(int m = 0;m < dis[n].length;m++){
 							dis[n][m] = dis[n][m]/Math.sqrt(ql);
@@ -61,9 +61,9 @@ public class featureSelect {
 					
 					for( corr = 0.95;corr >= 0.65;corr=corr-0.01){
 						FindS finds = new FindS();
-						int[] ind1 = finds.FindS(dis,Math.sqrt(2*(1-corr)));//-------------ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+						int[] ind1 = finds.FindS(dis,Math.sqrt(2*(1-corr)));//-------------ÓÐÐéÊý
 						FindL findl = new FindL();
-						int[] ind2 = findl.FindL(dis, Math.sqrt(2*(1-corr)));//------------ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+						int[] ind2 = findl.FindL(dis, Math.sqrt(2*(1-corr)));//------------ÓÐÐéÊý
 						if(ind1.length == 0||ind2.length == 0)
 							continue;
 						Mean mean = new Mean();
